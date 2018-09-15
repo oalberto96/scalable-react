@@ -7,7 +7,7 @@
 import React from "react";
 
 import styles from "./styles.css";
-import classNames from "classnames";
+import classnames from "classnames";
 
 function Drawer({
   items,
