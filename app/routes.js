@@ -42,7 +42,7 @@ export default function createRoutes(store) {
             injectReducer("navigationContainer", navigationReducer.default);
             injectSagas("navigationContainer", navigationSagas.default);
             injectReducer("linkListContainer", linkListReducer.default);
-            injectSagas("linkListContainer", linkListSagas.default);
+            injectSagas("linkList", linkListSagas.default);
             renderRoute(component);
           }
         );
