@@ -7,6 +7,7 @@
 import React from "react";
 
 import styles from "./styles.css";
+import classNames from "classnames";
 
 function Drawer({
   items,
@@ -24,7 +25,15 @@ function Drawer({
       {item[itemLabelAttr]}
     </div>
   ));
-  return <div className={styles.drawer}>{itemNodes}</div>;
+  return (
+    <div
+      className={classnames(styles.drawer, {
+        [styles.drawerOpen]: isDrawerOpen
+      })}
+    >
+      {itemNodes}
+    </div>
+  );
 }
 
 Drawer.propTypes = {
